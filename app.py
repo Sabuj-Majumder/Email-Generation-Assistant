@@ -536,11 +536,13 @@ SCENARIOS_PATH = (
     / "src" / "email_eval" / "data" / "scenarios.json"
 )
 
-DEFAULT_NEW_KEY_FACTS = """- Draft is attached to the email
+DEFAULT_NEW_KEY_FACTS = """e.g.
+- Draft is attached to the email
 - Need feedback by Tuesday afternoon
 - Next meeting is scheduled for Friday"""
 
-DEFAULT_REPLY_KEY_FACTS = """- Project deliverables are currently 90% complete
+DEFAULT_REPLY_KEY_FACTS = """e.g.
+- Project deliverables are currently 90% complete
 - Initial review will be ready by Thursday
 - Requesting budget sign-off by next Monday"""
 
@@ -666,7 +668,7 @@ with col_input:
             default_write_tone = sc["tone"]
         else:
             default_write_intent = ""
-            default_write_facts = DEFAULT_NEW_KEY_FACTS
+            default_write_facts = ""
             default_write_tone = "formal"
 
         st.markdown("<div class='section-label'>Participants</div>", unsafe_allow_html=True)
@@ -697,6 +699,7 @@ with col_input:
         write_facts = st.text_area(
             "Key facts to include",
             value=default_write_facts,
+            placeholder=DEFAULT_NEW_KEY_FACTS,
             height=155,
             key="write_facts",
             help="Add each fact on a new line, prefixed with a dash (-).",
@@ -771,7 +774,8 @@ with col_input:
 
         reply_facts = st.text_area(
             "Key facts to include",
-            value=DEFAULT_REPLY_KEY_FACTS,
+            value="",
+            placeholder=DEFAULT_REPLY_KEY_FACTS,
             height=120,
             key="reply_facts",
         )
