@@ -1,0 +1,39 @@
+# Secrets & environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.so
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Results (generated at runtime — not committed)
+results/raw_results.json
+results/raw_results.csv
+results/comparative_report.md
+
+# macOS
+.DS_Store
