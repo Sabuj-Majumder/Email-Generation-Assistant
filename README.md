@@ -33,9 +33,10 @@ The prompt strategy uses a clean delimiter (`===EMAIL===`) to isolate the model'
 
 ### Installation
 
-1. **Clone the repository and navigate to the root directory**:
+1. **Clone the repository and navigate to the directory**:
    ```bash
-   cd /Users/sabuj/Downloads/email-eval-assistant
+   git clone https://github.com/Sabuj-Majumder/Email-Generation-Assistant.git
+   cd Email-Generation-Assistant
    ```
 
 2. **Install dependencies and the package in editable mode**:
